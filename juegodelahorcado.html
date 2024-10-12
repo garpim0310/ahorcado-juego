@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="juegodelahorcado.css">
+    
+    
+    <title>El ahorcado</title>
+</head>
+
+
+<body>
+
+    <!--musica del juego:-->
+
+    <audio id="audio-fondo" loop>
+        <source src="audios-juegodelahorcado/Jumpin June - The Soundlings.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="grito-lose">
+        <source src="audios-juegodelahorcado/grito-lose.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="aplausos-win">
+        <source src="audios-juegodelahorcado/aplausos-eeeeeee.mp3" type="audio/mpeg">
+    </audio>
+    
+
+<!--Inicio del juego del ahorcado:-->
+
+
+<div class="granContenedor"> <!--Contenedor de todo el juego-->
+
+<!--Elementos de la interfaz del juego-->
+<div class="contenedor">
+    
+    <div class="palabraOculta"></div>
+    <input type="text" class="input">
+    <button class="boton">comprobar</button>
+</div>
+
+<!--Elementos del muñequito-->
+<div class="content-muñequito">
+
+    <div class="tronco" ><!--Elementos del artbol del muñequito-->
+        <div class="rama"></div>
+         <div class="cuerda"></div>
+    </div>
+    
+    
+    <div class="cabeza"><!--Elementos de la cabeza del muñequito-->
+        <div class="ojo-d">
+            <div class="pupila-d"></div>
+        </div>
+        <div class="ojo-i">
+            <div class="pupila-i"></div>
+        </div>
+        <div class="nariz"></div>
+        <div class="boca"></div>
+    </div>
+
+    <div class="cuerpo"><!--Elementos del cuerpo del muñequito-->
+
+        <div class="brazo-d"></div>
+        <div class="brazo-i"></div>
+        <div class="pie-d"></div>
+        <div class="pie-i"></div>
+    </div>
+
+</div><!--Fin de los elementos del muñequito-->
+
+</div><!--Fin del gran contenedor-->
+
+
+
+    <!--Elementos de la pantalla-win-->
+    <div class="pantalla-win" hidden>
+
+        <h1>YOU WIN!</h1>
+
+        <div class="estadisticas">
+
+            <img src="img-ahorcado/muñequito -win-celebrando.png" alt="" width="300px" height="290px" class="img-pantallita">
+
+            <H2>Estadisticas:</H2>
+            <div class="vitacora"></div>
+            <div class="puntuacion"></div>
+            <a href="http://127.0.0.1:5500/juego%20del%20ahorcado/juegodelahorcado.html" target="" rel=""> <img src="img-ahorcado/next.png" class="botonNext"></a>
+
+        </div>
+        
+    </div><!--Fin de pantalla Win-->
+
+    
+    <!--Elementos de la pantalla-lose-->
+    <div class="pantalla-lose" hidden>
+
+        <h1>YOU LOSE!</h1>
+
+        <div class="estadisticasF">
+
+            <img src="img-ahorcado/tumba-lose.png" alt="" width="210px" height="210px" class="img-pantallita">
+
+            <H2 >Palabra oculta:</H2>
+            <div class="world"></div>
+
+            <H2>Estadisticas:</H2>
+            <div class="vitacoraF"></div>
+            <div class="puntuacionF"></div>
+            <div class="world"></div>
+            <a href="http://127.0.0.1:5500/juego%20del%20ahorcado/juegodelahorcado.html" target="" rel=""> <img src="img-ahorcado/next.png" class="botonNext"></a>
+        </div>
+        
+    </div><!--Fin de pantalla Lose-->
+   
+    
+    <script src="juegodelahorcado.js"></script><!--Enlazador de html con javascript-->
+    
+</body>
+</html>

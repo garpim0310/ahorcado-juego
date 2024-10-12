@@ -1,0 +1,401 @@
+
+/*INICIO DEL CSS*/
+
+/*Elementos del juego_____________________________________________________________________________________________________________*/
+body{
+    font-size: 20px;
+    font-family: cursive;
+    overflow-x: hidden;
+    background-image: url(img-ahorcado/fondoahorcado.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenedor{
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    left: 35%;
+    top:40%;
+}
+
+
+.palabraOculta{
+    position: relative;
+    display: inline;
+    top: 170px;
+    min-width: 50%;
+    max-width: 100%;
+    font-size: 3.5em;
+    margin-bottom: 50px;
+}
+
+
+.input{
+    position: fixed;
+    top: 550px;
+    left: 500px;
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #0f0;
+}
+
+
+
+.boton{
+    font-family: sans-serif;
+    position: fixed;
+    top:550px;
+    height: 30px;
+    border-radius: 15px;
+    left:820px;
+    color: #fff;
+    background-color: #0f0;
+}
+
+.mover{/*Si la palabra elegida es muy larga la mueve a la izquierda para centrarla*/
+    left: -355px;
+}
+
+
+
+
+/*ELEMENTOS DEL MUÑEQUITO________________________________________________________________________________________________________*/
+
+.content-muñequito{
+    position: absolute;
+    left: -300px;
+    height: 50%;
+}
+
+
+.tronco{
+    position: relative;
+    right:-950px;
+    top: 50px;
+    width: 10px;
+    height: 400px;
+}
+
+
+.rama{
+    width: 110px;
+    height: 10px;
+}
+
+.cuerda{
+    margin-left: 90px;
+    width: 10px;
+    height: 50px;
+}
+
+.cabeza{
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    left:1000px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.ojo-d{
+    position: relative;
+    left: 25px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.pupila-d{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+}
+
+   
+.ojo-i{
+    position: relative;
+    left: 55px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+}
+
+.pupila-i{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+}
+
+.nariz{
+    position: relative;
+    left: 46px;
+    top: 15px;
+    width: 7px;
+    height: 7px;
+    border-radius: 45%;  
+}
+
+.boca{
+    position: relative;
+    top: 10px;
+    left: 35px;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    border-left:  transparent;
+    border-right:  transparent; 
+}
+
+.cuerpo{
+    position: absolute;
+    left: 1030px;
+    top: 200px;
+    width: 40px;
+    height: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: respirar 1s alternate infinite;
+}
+
+.brazo-d{
+    z-index: -2;
+    position: relative;
+    left: -30px;
+    width: 20px;
+    height: 70px;
+    transform: rotate(45deg);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.brazo-i{
+    z-index: -3;
+    position: relative;
+    top: -73px;
+    left: 55px;
+    width: 20px;
+    height: 70px;
+    transform: rotate(-45deg);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.pie-d{
+    z-index: -10;
+    position: relative;
+    top: -70px;
+    left: -17px;
+    width: 22px;
+    height: 95px;
+    transform: rotate(25deg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.pie-i{
+    z-index: -10;
+    position: relative;
+    top: -165px;
+    left: 36px;
+    width: 22px;
+    height: 95px;
+    transform: rotate(-25deg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* Clases de mostrar muñeco en pantalla*/
+.color{
+    background-color: #000;
+}
+
+.colorb{
+    background-color: #fff;
+}
+
+.outline{
+    background-color: rgb(159, 66, 66);
+    outline: 5px solid #000;
+}
+
+
+.border-color-happy{
+    border-bottom: 3px solid black;    
+}
+
+
+
+
+
+
+
+/*ANIMACIONES DEL MUÑEQUITO:*/
+
+@keyframes respirar{
+    0%{
+        width: 40px;
+        height: 80px;
+    }
+
+    100%{
+        width: 42px;
+        height: 81px;
+    }
+}
+
+.rapido{
+    animation-duration: 0.1s; /*acelera la respiracion del muñequito*/
+}
+
+.border-color-sad{
+    border-top: 3px solid black;   
+    top: 20px; 
+}
+
+.grito-boca{
+    outline: 2px solid #000;
+    background-color: #f00;
+}
+/*_____________________________________________________*/
+
+
+
+
+
+
+
+/* ANIMACION-WIN  y ANIMACION-LOSE:__________________________________________________________________________________________________________________*/
+
+h1{/*textos (GANASTE), (PERDISTE) de las pantallas.*/
+    position: relative;
+    top: -100px;
+    margin-left: -100px;
+    margin-bottom: -100px;
+    text-align: left;
+    font-size: 5em;
+    color: #fff;
+    text-shadow:  3px 4px 2px #098;
+    animation: h1animado 0.7s alternate infinite ;
+}
+
+.pantalla-win{
+    z-index: 500;
+    position: absolute;
+    top: 100px;
+    left: 41%;
+    font-size: medium;
+}
+
+.pantalla-lose{
+    z-index: 500;
+    position: absolute;
+    top: 100px;
+    left: 41%;
+    font-size: medium;
+}
+
+.estadisticas{/*estadisticas pantalla win*/
+    position: fixed;
+    top: 100px;
+    width: 300px;
+    height: 250px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #0f0;
+}
+
+.estadisticasF{/*estadisticas pantalla-lose*/
+    position: fixed;
+    top: 70px;
+    width: 300px;
+    height: 250px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #f00;
+}
+
+.img-pantallita{
+    position: relative;
+    top: 70px;
+    margin-bottom: 20px;
+}
+
+h2{
+    color: #000;
+    text-shadow: 2px 1px 2px #0f0;
+}
+
+.muñequitoBailando{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+/*BOTON NEXT:______________*/
+
+.botonNext{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    animation: animar-boton 1s alternate infinite;
+}
+
+
+/*animacion del boton Next*/
+
+@keyframes animar-boton {
+    0%{
+        width: 40px;
+        height: 40px;
+    }
+
+    100%{
+        padding-left: 160px;
+    }
+
+}
+
+
+@keyframes h1animado{
+    0%{
+        color: #fff;
+    }
+
+    50%{
+        color:#ff0;
+    }
+
+    75%{
+        color: #fa0;
+    }
+
+    100%{
+        color: #f00;
+    }
+}
+
+
+
+
+
+
+
+
